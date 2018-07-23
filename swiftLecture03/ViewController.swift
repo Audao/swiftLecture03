@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
+    
+    @IBOutlet weak var lbName: UILabel!
+    @IBOutlet weak var btnConfim: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func btnConfimClicked(_ sender: Any) {
+        lbName.text = " 欢迎使用！！！！"
+    }
+    
 }
 
