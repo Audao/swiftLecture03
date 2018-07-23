@@ -12,7 +12,8 @@ class ViewController: UIViewController {
   
     
     @IBOutlet weak var lbName: UILabel!
-    @IBOutlet weak var btnConfim: UIButton!
+    
+
     
     
     override func viewDidLoad() {
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
 
     @IBAction func btnConfimClicked(_ sender: Any) {
         lbName.text = " 欢迎使用！！！！"
+        let button = sender as! UIButton
+        button.setTitle("OK", for: UIControl.State.normal)
     }
     
 }

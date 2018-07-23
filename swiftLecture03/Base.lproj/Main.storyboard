@@ -46,13 +46,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnConfim" destination="2Ah-aY-uDB" id="cOV-XN-L6s"/>
-                        <outlet property="lbName" destination="IAQ-Ez-obs" id="han-n1-Y4d"/>
+                        <outlet property="lbName" destination="IAQ-Ez-obs" id="rA5-Gp-Ru4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="378" y="111"/>
         </scene>
     </scenes>
 </document>
