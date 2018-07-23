@@ -33,11 +33,27 @@
                                     <action selector="btnConfimClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiL-XE-fxZ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsz-CP-MqO">
-                                <rect key="frame" x="67" y="133" width="240" height="128"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2DB-z9-QuN">
+                                <rect key="frame" x="16" y="87" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99607843137254903" green="0.53333333333333333" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                                <connections>
+                                    <action selector="switchStatus:" destination="BYZ-38-t0r" eventType="valueChanged" id="nwj-x4-V9s"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="kmL-53-USt">
+                                <rect key="frame" x="24" y="155" width="337" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="scoreSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vz4-Sn-q35"/>
+                                </connections>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="eUK-hF-EHg">
+                                <rect key="frame" x="265" y="206" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vOD-2E-22x"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -51,13 +67,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addScoreStepper" destination="eUK-hF-EHg" id="11S-vV-DnJ"/>
                         <outlet property="lbName" destination="IAQ-Ez-obs" id="rA5-Gp-Ru4"/>
-                        <outlet property="touchView" destination="nsz-CP-MqO" id="xyo-ib-pAl"/>
+                        <outlet property="scoreSlider" destination="kmL-53-USt" id="lps-CG-qii"/>
+                        <outlet property="switchStatus" destination="2DB-z9-QuN" id="vZj-gq-Mqx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378" y="111"/>
+            <point key="canvasLocation" x="376.80000000000001" y="110.19490254872565"/>
         </scene>
     </scenes>
 </document>

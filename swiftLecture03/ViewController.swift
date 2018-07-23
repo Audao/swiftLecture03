@@ -13,13 +13,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lbName: UILabel!
     
-    @IBOutlet weak var touchView: UIView!
+
+    @IBOutlet weak var scoreSlider: UISlider!
+    @IBOutlet weak var switchStatus: UISwitch!
     
+    @IBOutlet weak var addScoreStepper: UIStepper!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+
     }
 
     @IBAction func btnConfimClicked(_ sender: Any) {
@@ -28,24 +33,26 @@ class ViewController: UIViewController {
         button.setTitle("OK", for: UIControl.State.normal)
     }
     
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-     print("touchesBegan")
-        if let touch = touches.first {
-            let loc = touch.location(in: self.touchView)
-            
-            print("\( loc )")
-            if( self.touchView.frame.contains(loc) ){
-                self.touchView.backgroundColor = UIColor.red
-            }else{
-                self.touchView.backgroundColor = UIColor.blue
-            }
-            
-        }
+    @IBAction func switchStatus(_ sender: Any) {
         
+        print("\(switchStatus.isOn)")
     }
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesEnded")
+    
+
+    
+    @IBAction func scoreSliderChanged(_ sender: Any) {
+        lbName.text = "change :\( Float (scoreSlider.value) )"
+        addScoreStepper.value = Double (scoreSlider.value)
+        print("\(scoreSlider.value)")
     }
+            
+    @IBAction func stepperChanged(_ sender: Any) {
+        lbName.text = "change :\( Float (addScoreStepper.value) )"
+        scoreSlider.value = Float(addScoreStepper.value)
+        print("\(addScoreStepper.value)")
+    }
+        
+    
+    
 }
 
